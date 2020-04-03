@@ -61,6 +61,7 @@ bool InsertList(SqList &L, int i, int e)
     L.length++;
     return true;
 }
+
 // 删除操作
 bool DeleteList(SqList &L, int i, int &e)
 {
@@ -74,4 +75,21 @@ bool DeleteList(SqList &L, int i, int &e)
     }
     L.length--;
     return true;
+}
+
+// 按位查找
+int GetElem(SqList L, int i)
+{
+    return L.data[i-1];
+}
+
+// 按值查找
+int LocateElem(SqList L, int e)
+{
+    for (int j = 0; j < L.length; j++) {
+        if (L.data[j] == e) {
+            return j+1;
+        }
+    }
+    return 0;
 }

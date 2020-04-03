@@ -34,4 +34,8 @@ void IncreaseList(DSqList &L, int n);
 bool InsertList(SqList &L, int i, int e);
 // 删除操作
 bool DeleteList(SqList &L, int i, int &e);
+// 按位查找
+int GetElem(SqList L, int i);
+// 按值查找
+int LocateElem(SqList L, int i);
 #endif /* SqList_hpp */
