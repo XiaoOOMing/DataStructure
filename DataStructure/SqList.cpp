@@ -43,3 +43,35 @@ void IncreaseList(DSqList &L, int n)
     L.max_size += n;
     free(p);
 }
+
+// 插入操作
+bool InsertList(SqList &L, int i, int e)
+{
+    if (i < 1 || i > L.length + 1) {
+        return false;
+    }
+    if (L.length == MAX_SIZE) {
+        return false;
+    }
+    
+    for (int j = L.length; j >= i ; j--) {
+        L.data[j] = L.data[j-1];
+    }
+    L.data[i-1] = e;
+    L.length++;
+    return true;
+}
+// 删除操作
+bool DeleteList(SqList &L, int i, int &e)
+{
+    if (i < 1 || i > L.length) {
+        return false;
+    }
+    
+    e = L.data[i-1];
+    for (int j = i; j < L.length; j++) {
+        L.data[j-1] = L.data[j];
+    }
+    L.length--;
+    return true;
+}

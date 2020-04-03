@@ -30,4 +30,8 @@ void InitSqList(SqList &L);
 void InitDSqList(DSqList &L);
 // 动态线性表增加
 void IncreaseList(DSqList &L, int n);
+// 插入操作
+bool InsertList(SqList &L, int i, int e);
+// 删除操作
+bool DeleteList(SqList &L, int i, int &e);
 #endif /* SqList_hpp */
